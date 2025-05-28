@@ -23,7 +23,7 @@ public class Principal {
             conexaoModel.setPorta("5432");
             conexaoModel.setBanco("livros");
             conexaoModel.setUsuario("postgres");
-            conexaoModel.setSenha("postgres");
+            conexaoModel.setSenha("root");
 
             if (boConexao.validarConexao(conexaoModel)) {
                 conexao = daoConectarBD.conectar(conexaoModel);

@@ -1,136 +1,86 @@
-# Sistema de Gerenciamento de Conexão com Banco de Dados
+# Sistema de Gerenciamento de Conexão com Banco de Dados PostgreSQL
 
-## 📋 Descrição
-Este projeto implementa um sistema de gerenciamento de conexão com banco de dados PostgreSQL utilizando Java, seguindo padrões de projeto e boas práticas de desenvolvimento. O sistema foi desenvolvido como parte do curso de Análise e Desenvolvimento de Sistemas (ADS) da Universidade de Caxias do Sul (UCS), onde o código fonte base foi fornecido pela instituição e adaptado para execução no Visual Studio Code.
+## 📋 Sobre o Projeto
 
-## 🎓 Informações Acadêmicas
-- **Curso:** Análise e Desenvolvimento de Sistemas (ADS)
-- **Instituição:** Universidade de Caxias do Sul (UCS)
-- **Ano:** 2025
-- **Desenvolvedor:** Dev ⩿ A.L.N/⪀
-- **Tipo de Projeto:** Adaptação de código fonte fornecido pela instituição
+Este projeto foi desenvolvido como parte da disciplina de Análise e Desenvolvimento de Sistemas da Universidade de Caxias do Sul (UCS). O sistema implementa uma conexão com banco de dados PostgreSQL utilizando Java, seguindo padrões de projeto como DAO e POJO.
 
 ## 🚀 Tecnologias Utilizadas
+
 - Java 8
 - PostgreSQL
 - Maven
-- JDBC
 - Visual Studio Code
+- pgAdmin 4
 
-## 📦 Pré-requisitos
-- JDK 8 ou superior
-- PostgreSQL 12 ou superior
-- Maven 3.6 ou superior
-- Visual Studio Code com extensões Java
+## ⚙️ Funcionalidades
 
-## 🔧 Instalação
-
-1. Clone o repositório:
-```bash
-git clone [URL_DO_REPOSITÓRIO]
-```
-
-2. Configure o banco de dados PostgreSQL:
-```sql
-CREATE DATABASE livros;
-```
-
-3. Configure as credenciais do banco de dados no arquivo `src/main/java/combo/principal/Principal.java`:
-```java
-conexaoModel.setHost("localhost");
-conexaoModel.setPorta("5432");
-conexaoModel.setBanco("livros");
-conexaoModel.setUsuario("postgres");
-conexaoModel.setSenha("sua_senha");
-```
-
-4. Compile o projeto:
-```bash
-mvn clean install
-```
-
-## 🏗️ Estrutura do Projeto
-```
-VSCode_Project/
-├── src/
-│   └── main/
-│       └── java/
-│           └── combo/
-│               ├── principal/
-│               │   └── Principal.java
-│               ├── bo/
-│               │   └── BoConexao.java
-│               ├── dao/
-│               │   └── DaoConectarBD.java
-│               └── modelo/
-│                   └── Conexao.java
-├── pom.xml
-└── .vscode/
-    └── launch.json
-```
-
-## 🎯 Funcionalidades
 - Conexão com banco de dados PostgreSQL
 - Validação de dados de conexão
-- Tratamento de erros
-- Gerenciamento de conexão
+- Tratamento de exceções
+- Feedback de status da conexão
 
-## 📊 Arquitetura
+## 🛠️ Arquitetura
 
-### Camadas do Sistema
-1. **Apresentação**: Interface com o usuário
-2. **Negócios**: Regras de negócio e validações
-3. **Acesso a Dados**: Interação com o banco de dados
-4. **Modelo**: Representação dos dados
+O projeto segue uma arquitetura em camadas:
+- Camada de Apresentação (Principal)
+- Camada de Negócios (BO)
+- Camada de Acesso a Dados (DAO)
+- Camada de Modelo
 
-### Padrões de Design
-- Arquitetura em Camadas
-- DAO (Data Access Object)
-- POJO (Plain Old Java Object)
+## 📦 Estrutura do Projeto
 
-## 🔄 Fluxo de Execução
-1. Inicialização da aplicação
-2. Validação dos dados de conexão
-3. Estabelecimento da conexão
-4. Execução das operações
-5. Encerramento da conexão
+```
+combo/
+├── principal/  (Camada de Apresentação)
+│   └── Principal.java
+├── bo/         (Camada de Negócios)
+│   └── BoConexao.java
+├── dao/        (Camada de Acesso a Dados)
+│   └── DaoConectarBD.java
+└── modelo/     (Camada de Modelo)
+    └── Conexao.java
+```
 
-## 🛠️ Desenvolvimento
+## 🔧 Configuração do Ambiente
 
-### Configuração do Ambiente
 1. Instale o JDK 8
-2. Instale o PostgreSQL
-3. Instale o Maven
-4. Configure o VS Code com as extensões Java
+2. Instale o Maven
+3. Instale o PostgreSQL
+4. Instale o pgAdmin 4
+5. Clone este repositório
+6. Configure o banco de dados `livros`
+7. Execute o projeto
 
-### Executando o Projeto
-1. Abra o projeto no VS Code
-2. Execute a classe `Principal.java`
-3. Verifique a saída no console
+## 📝 Requisitos do Sistema
 
-## 📈 Melhorias Futuras
-- Implementação de suporte a múltiplos SGBDs
-- Interface gráfica com JavaFX
-- Sistema de paginação
-- Validação visual de campos
-- Logs detalhados
+### Requisitos Funcionais
+- Estabelecer e encerrar conexão com PostgreSQL
+- Validar dados de conexão
+- Fornecer feedback sobre o status da conexão
 
-## 🤝 Contribuição
-1. Faça o fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+### Requisitos Não-Funcionais
+- Confiabilidade no tratamento de erros
+- Usabilidade através de interface clara
+- Portabilidade entre diferentes ambientes
+- Segurança básica na validação de dados
 
-## 📝 Licença
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## 🔄 Próximas Melhorias
 
-## 👥 Autores
-- Dev ⩿ A.L.N/⪀ - ADS UCS 2025
+- Implementação do padrão Factory Method para suporte a múltiplos SGBDs
+- Desenvolvimento de sistema de paginação
+- Criação de interface gráfica
+
+## 👨‍💻 Autor
+
+Dev ⩿ A.L.N/⪀
+
+## 📄 Licença
+
+Este projeto está sob a licença da Universidade de Caxias do Sul.
 
 ## 📚 Referências
-- [Oracle Java Documentation](https://docs.oracle.com/javase/8/)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-- [Maven Documentation](https://maven.apache.org/guides/)
-- Design Patterns: Elements of Reusable Object-Oriented Software
-- Material didático fornecido pela UCS 
+
+- Documentação oficial do Java
+- Documentação oficial do PostgreSQL
+- Documentação oficial do Maven
+- Código base fornecido pela UCS 
