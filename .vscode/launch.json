@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Executar Principal",
+            "request": "launch",
+            "mainClass": "combo.principal.Principal",
+            "projectName": "VSCode_Project"
+        }
+    ]
+} 
