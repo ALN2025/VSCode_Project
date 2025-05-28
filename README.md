@@ -2,7 +2,7 @@
 
 ## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte da disciplina de Análise e Desenvolvimento de Sistemas da Universidade de Caxias do Sul (UCS). O sistema implementa uma conexão com banco de dados PostgreSQL utilizando Java, seguindo padrões de projeto como DAO e POJO.
+Este projeto foi desenvolvido e adaptado por mim como parte da disciplina de Análise e Desenvolvimento de Sistemas da Universidade de Caxias do Sul (UCS). O sistema implementa uma conexão com banco de dados PostgreSQL utilizando Java, seguindo padrões de projeto como DAO e POJO. O código base inicial foi fornecido pela instituição.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -50,6 +50,10 @@ combo/
 5. Clone este repositório
 6. Configure o banco de dados `livros`
 7. Execute o projeto
+
+## 🚧 Processo de Desenvolvimento
+
+O código base inicial deste projeto foi fornecido pela Universidade de Caxias do Sul (UCS), originalmente desenvolvido no ambiente Eclipse. Meu trabalho envolveu a adaptação deste código para ser executado no Visual Studio Code, meu editor de código preferido. Para isso, estruturei o projeto utilizando Maven para o gerenciamento de dependências e configurei o ambiente de desenvolvimento no VS Code, incluindo o arquivo `launch.json` para facilitar a execução e o debug.
 
 ## 📝 Requisitos do Sistema
 
